@@ -13,7 +13,16 @@ public class SteeringSeek : MonoBehaviour
         
         return steering;
     }
-    
+    public Vector3 Avoid(Vector3 targetPosition, Vector3 currentVelocity, float mass)
+    {
+        var desiredVelocity = Vector3.Normalize( gameObject.transform.position - targetPosition) * 6f;
+        var steering = desiredVelocity - currentVelocity;
+        steering = steering.normalized * 6f;
+        steering = steering / mass;
+
+        return steering;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
