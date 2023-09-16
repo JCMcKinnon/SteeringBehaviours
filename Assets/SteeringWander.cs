@@ -16,7 +16,6 @@ public class SteeringWander : MonoBehaviour
         var newDirection =  (Vector3)pos.position - randomPoint;
         newDirection.Normalize();
 
-        print(newDirection * 2);
         //every 2 seconds, repeat...(in manager)
         return newDirection * 5;
         

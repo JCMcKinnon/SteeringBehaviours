@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 5454031020703584744}
   - component: {fileID: 5069921363408083732}
   - component: {fileID: 833025349744542873}
+  - component: {fileID: 6253841996041440545}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,8 +127,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seek: {fileID: 5454031020703584744}
   wander: {fileID: 833025349744542873}
+  collisionAvoid: {fileID: 0}
   radius: 1
-  avoid: {fileID: 0}
+  avoid: {fileID: 5545451826484114742}
+  isWandering: 0
+  canAvoidWall: 0
+  walls: []
 --- !u!114 &833025349744542873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,3 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seek: {fileID: 5454031020703584744}
+--- !u!114 &6253841996041440545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842949445340825235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125916e4bc7c8df4983c4782622e11ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
